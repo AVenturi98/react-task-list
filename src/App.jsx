@@ -10,6 +10,8 @@ function App() {
     else return tasksComplet.push(el)
   })
 
+  const count = 0
+
 
   return (
     // console.log(tasks)
@@ -18,7 +20,7 @@ function App() {
         <h1>Task Manager</h1>
       </header>
       <main className="content">
-        <h3>Current Tasks (n)</h3>
+        <h3>Current Tasks ({tasksCurrent.length})</h3>
         <ul>
           {tasksCurrent.map((task) => <li key={task.id}>
             <p>{task.title} <span className="badge">{task.state}</span></p>
@@ -27,7 +29,7 @@ function App() {
           </li>)}
         </ul>
         <hr />
-        <h3>Completed Tasks (n)</h3>
+        <h3>Completed Tasks ({tasksComplet.length})</h3>
         <ul>
           {tasksComplet.map((task) => <li key={task.id}>
             <p>{task.title} <span className="badge">{task.state}</span></p>

@@ -1,3 +1,41 @@
-.text-state {
-  color: red
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+/* HEADER  */
+
+header {
+  background-color: aquamarine;
+  padding: 20px
+}
+
+/* MAIN */
+
+main{
+  padding: 20px
+}
+
+h3 {
+  margin: 10px 0
+}
+
+ul > * {
+  line-height: 1.4rem;
+  margin-bottom: 1.5rem;
+}
+
+li :first-child {
+  font-weight: bold;
+}
+
+.badge {
+  background-color: rgb(231, 125, 4);
+  color: white;
+  padding: 0.5em
 }

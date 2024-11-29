@@ -17,20 +17,20 @@ function App() {
       <header>
         <h1>Task Manager</h1>
       </header>
-      <main>
-        <h4>Current Tasks (n)</h4>
+      <main className="content">
+        <h3>Current Tasks (n)</h3>
         <ul>
           {tasksCurrent.map((task) => <li key={task.id}>
-            <p>{task.title} <span className="text-state">{task.state}</span></p>
+            <p>{task.title} <span className="badge">{task.state}</span></p>
             <p>Priority: {task.priority}</p>
             <p>Es. time: {task.estimatedTime}</p>
           </li>)}
         </ul>
         <hr />
-        <h4>Completed Tasks (n)</h4>
+        <h3>Completed Tasks (n)</h3>
         <ul>
           {tasksComplet.map((task) => <li key={task.id}>
-            <p>{task.title} <span className="text-state">{task.state}</span></p>
+            <p>{task.title} <span className="badge">{task.state}</span></p>
             <p>Priority: {task.priority}</p>
             <p>Es. time: {task.estimatedTime}</p>
           </li>)}

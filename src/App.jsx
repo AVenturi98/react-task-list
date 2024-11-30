@@ -10,9 +10,6 @@ function App() {
     else return tasksComplet.push(el)
   })
 
-  const count = 0
-
-
   return (
     // console.log(tasks)
     <>
@@ -23,7 +20,7 @@ function App() {
         <h3>Current Tasks ({tasksCurrent.length})</h3>
         <ul>
           {tasksCurrent.map((task) => <li key={task.id}>
-            <p>{task.title} <span className="badge">{task.state}</span></p>
+            <p className='flex'>{task.title} <span className="badge">{task.state}</span></p>
             <p>Priority: {task.priority}</p>
             <p>Es. time: {task.estimatedTime}</p>
           </li>)}
@@ -32,7 +29,7 @@ function App() {
         <h3>Completed Tasks ({tasksComplet.length})</h3>
         <ul>
           {tasksComplet.map((task) => <li key={task.id}>
-            <p>{task.title} <span className="badge">{task.state}</span></p>
+            <p className='flex'>{task.title} <span className="badge">{task.state}</span></p>
             <p>Priority: {task.priority}</p>
             <p>Es. time: {task.estimatedTime}</p>
           </li>)}
